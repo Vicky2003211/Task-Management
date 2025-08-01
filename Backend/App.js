@@ -8,18 +8,15 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors({
-  origin: [
-    'http://localhost:3000',  
-    'http://localhost:3001',    
-    'http://localhost:5173',    
-    'http://localhost:4173'     
+  origin: [   
+    'http://localhost:5173',        
   ],
   credentials: true   
 }));
 
 app.use(express.json());    
 
-const MONGO_URI = 'mongodb+srv://User:1234@cluster0.ldhyl.mongodb.net/Agent-management?retryWrites=true&w=majority&appName=Cluster0';
+const MONGO_URI = process.env.MONGO_URI;
 
 mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,      

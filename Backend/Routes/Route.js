@@ -38,7 +38,7 @@ router.post('/login', login);
 
 // Protected routes
 router.get('/users/role/:role', verifyToken, getUsersByRole);
-router.get('/users', getAllUsers);
+router.get('/users', verifyToken, getAllUsers);
 router.put('/users/:email', verifyToken, updateUser);
 router.delete('/users/:email', verifyToken, deleteUser);
 router.put('/update-password', verifyToken, updatePassword);
@@ -54,7 +54,7 @@ router.patch('/csv-data/complete/:taskId', verifyToken, completeTask);
 router.delete('/csv-data/task/:taskId', verifyToken, deleteTask);
 
 // Task assignment routes
-router.post('/assign-tasks', assignTasksToAgents);
+router.post('/assign-tasks', verifyToken,assignTasksToAgents);
 router.post('/assign-tasks/selected', verifyToken, assignTasksToSelectedAgents);
 router.get('/task-details/agent/:agentId', verifyToken, getTaskDetailsByAgent);
 
