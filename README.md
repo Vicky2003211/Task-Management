@@ -174,7 +174,7 @@ npm run dev
 * Ensure exactly 5 agents are selected during task distribution
 * Validate file structure before uploading
 * Agents and Admins can manage their profile securely via Edit Profile
-* There is no registration page so the developers register user-Admin using any testing environment like Postman,etc... and the admin need to create the Agents
+* There is no registration page so the developers need to register user-Admin using any testing environment like Postman,etc... and the admin need to create the Agents
 
 ## Important!!!
 * Here Sample Admin will be
